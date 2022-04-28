@@ -25,7 +25,7 @@ jobs:
         if: steps.linter.outputs.checks-failed > 0
         run: |
           echo "Some files failed the linting checks!"
-          exit 1
+        # exit 1
 
   project-builder:
     # Uses a matrix strat

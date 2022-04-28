@@ -46,6 +46,6 @@ jobs:
           sudo apt update
           sudo apt install build-essential cmake
 
-      - name: Build Individual Projects
+      - name: Test Individual Projects
         run: |
           cd assignments/${{ matrix.project }} && ./run.sh --test

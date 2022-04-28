@@ -26,3 +26,26 @@ jobs:
         run: |
           echo "Some files failed the linting checks!"
           exit 1
+
+  project-builder:
+    # Uses a matrix strat
+    name: Project Builder
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project:
+          - ex.am.ple_project-name
+          - 0.0.1_CoolProject2
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install deps
+        run: |
+          apt update
+          apt install build-essential cmake
+
+      - name: Build Individual Projects
+        run: |
+          cd assignments/${{ matrix.project }} && ./run.sh

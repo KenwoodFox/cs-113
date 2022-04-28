@@ -7,11 +7,7 @@ pro = pexpect.spawn("./" + os.environ.get("PROJ_NAME"))
 pro.logfile = sys.stdout.buffer
 
 try:
-    pro.expect("What is your name?:*", timeout=1)
-
-    pro.sendline("TestUserName")
-
-    pro.expect("Hello TestUserName*", timeout=1)
+    pro.expect("Hello World!*", timeout=1)
 except:
     print("FAIL")
     sys.exit(1)

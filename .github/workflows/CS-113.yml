@@ -48,4 +48,4 @@ jobs:
 
       - name: Build Individual Projects
         run: |
-          cd assignments/${{ matrix.project }} && ./run.sh
+          cd assignments/${{ matrix.project }} && ./run.sh --test

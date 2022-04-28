@@ -12,7 +12,7 @@ cmake . -B_build
 if [[ $* == *--test* ]]
 then
     cd _build && make
-    python test.py
+    python ../test.py
 else
     cd _build && make && ./$PROJ_NAME # Expects make
 fi

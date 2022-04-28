@@ -1,0 +1,28 @@
+name: CS-113
+
+on:
+  push:
+    branches:
+      - "main"
+    tags:
+      - "*"
+  pull_request:
+
+jobs:
+  cpp-linter:
+    name: clang-tidy (delinter)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: shenxianpeng/cpp-linter-action@v1
+        id: linter
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          style: file
+
+      - name: Fail if lint required
+        if: steps.linter.outputs.checks-failed > 0
+        run: |
+          echo "Some files failed the linting checks!"
+          exit 1

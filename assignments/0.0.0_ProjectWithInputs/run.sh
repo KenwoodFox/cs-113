@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PROJ_NAME="hello"
+export PROJ_NAME="name"
 
 # Written by Joe
 # If you do not have bash (or zsh or, something)
@@ -8,4 +8,11 @@ export PROJ_NAME="hello"
 # See the readme at the root of this repo.
 
 cmake . -B_build
-cd _build && make && ./$PROJ_NAME # Expects make
+
+if [[ $* == *--test* ]]
+then
+    cd _build && make
+    python test.py
+else
+    cd _build && make && ./$PROJ_NAME # Expects make
+fi

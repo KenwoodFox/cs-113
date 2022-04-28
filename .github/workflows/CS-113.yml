@@ -35,8 +35,8 @@ jobs:
     strategy:
       matrix:
         project:
-          - ex.am.ple_project-name
-          - 0.0.1_CoolProject2
+          - 0.0.0_HelloWorld
+          - 0.0.0_ProjectWithInputs
 
     steps:
       - uses: actions/checkout@v3

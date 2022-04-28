@@ -1,11 +1,8 @@
-/* Joe
- * 2022
- */
-
 #include <iostream>
 
-int main()
+#include "helloLib/printhello.h"
+
+void printHello()
 {
     std::cout << "Hello World!\n";
-    return 0;
 }

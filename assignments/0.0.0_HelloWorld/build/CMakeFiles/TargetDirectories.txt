@@ -1,3 +1,0 @@
-/home/joe/College/SNHU/Semesters/22FADAY/CS-113 - Introduction to Programming/assignments/ex.am.ple_project-name/build/CMakeFiles/hello.dir
-/home/joe/College/SNHU/Semesters/22FADAY/CS-113 - Introduction to Programming/assignments/ex.am.ple_project-name/build/CMakeFiles/edit_cache.dir
-/home/joe/College/SNHU/Semesters/22FADAY/CS-113 - Introduction to Programming/assignments/ex.am.ple_project-name/build/CMakeFiles/rebuild_cache.dir

@@ -25,4 +25,33 @@ jobs:
         if: steps.linter.outputs.checks-failed > 0
         run: |
           echo "Some files failed the linting checks!"
-          exit 1
+        # exit 1
+
+  project-builder:
+    # Uses a matrix strat
+    name: Project Builder
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project:
+          - 0.0.0_HelloWorld
+          - 0.0.0_NameProject
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install deps
+        run: |
+          sudo apt update
+          sudo apt install build-essential cmake
+
+      - name: Test Individual Projects
+        run: |
+          cd assignments/${{ matrix.project }} && ./run.sh --test
+
+      - name: Upload Binaries as artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.project }}
+          path: assignments/${{ matrix.project }}/_build/*_binary

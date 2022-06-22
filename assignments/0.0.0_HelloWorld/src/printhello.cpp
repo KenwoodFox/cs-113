@@ -4,8 +4,9 @@
 
 #include <iostream>
 
-int main()
+#include "printhello.h"
+
+void printHello()
 {
     std::cout << "Hello World!\n";
-    return 0;
 }

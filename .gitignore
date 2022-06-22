@@ -1,2 +1,6 @@
 # Build artifacts
 _build/
+build/
+
+# Dev
+.vscode

@@ -3,7 +3,7 @@
 import os, sys
 import pexpect
 
-pro = pexpect.spawn("./" + os.environ.get("PROJ_NAME"))
+pro = pexpect.spawn("./" + os.environ.get("PROJ_NAME") + "_binary")
 pro.logfile = sys.stdout.buffer
 
 try:

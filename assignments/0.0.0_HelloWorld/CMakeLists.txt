@@ -1,6 +1,14 @@
-# Min CMake ver
+# Minimum required CMake version
 cmake_minimum_required(VERSION 3.11)
 
-project($ENV{PROJ_NAME})
+# The name of our project
+project($ENV{PROJ_NAME}
+    DESCRIPTION "0.0.0"
+    LANGUAGES CXX)
 
-add_executable($ENV{PROJ_NAME} $ENV{PROJ_NAME}.cpp)
+# Our target
+add_executable($ENV{PROJ_NAME}_binary main.cpp
+    src/printhello.cpp)
+
+target_compile_features($ENV{PROJ_NAME}_binary PRIVATE cxx_std_20)
+target_include_directories($ENV{PROJ_NAME}_binary PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)

@@ -36,7 +36,7 @@ jobs:
       matrix:
         project:
           - 0.0.0_HelloWorld
-          - 0.0.0_ProjectWithInputs
+          - 0.0.0_NameProject
 
     steps:
       - uses: actions/checkout@v3

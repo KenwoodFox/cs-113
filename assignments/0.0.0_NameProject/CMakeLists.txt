@@ -2,13 +2,12 @@
 cmake_minimum_required(VERSION 3.11)
 
 # Our project
-project("hello"
+project("name"
     DESCRIPTION "0.0.0"
     LANGUAGES CXX)
 
 # our sources
 set(SOURCES
-    src/printhello.cpp
     src/main.cpp
 )
 

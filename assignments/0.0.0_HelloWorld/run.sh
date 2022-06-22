@@ -12,5 +12,5 @@ then
     cd _build && make
     python ../test.py
 else
-    cd _build && make && ./$PROJ_NAME\_binary # Expects make
+    cd _build && make && ./*_binary # Expects make
 fi

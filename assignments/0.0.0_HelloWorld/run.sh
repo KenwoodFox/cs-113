@@ -1,7 +1,5 @@
 #!/bin/bash
 
-export PROJ_NAME="hello"
-
 # Written by Joe
 # If you do not have bash (or zsh or, something)
 # You can invoke cmake as ususal per your system

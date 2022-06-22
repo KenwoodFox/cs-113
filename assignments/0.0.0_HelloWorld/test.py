@@ -1,16 +1,20 @@
 # Written by joe
 
 import os, sys
+import fnmatch
 import pexpect
 
-pro = pexpect.spawn("./" + os.environ.get("PROJ_NAME") + "_binary")
-pro.logfile = sys.stdout.buffer
+for file in os.listdir("."):
+    if fnmatch.fnmatch(file, "*_binary"):
+        pro = pexpect.spawn("./" + file)
 
-try:
-    pro.expect("Hello World!*", timeout=1)
-except:
-    print("FAIL")
-    sys.exit(1)
+        pro.logfile = sys.stdout.buffer
 
-print("PASS")
-sys.exit(0)
+        try:
+            pro.expect("Hello World!*", timeout=1)
+        except:
+            print("FAIL")
+            sys.exit(1)
+
+        print("PASS")
+        sys.exit(0)

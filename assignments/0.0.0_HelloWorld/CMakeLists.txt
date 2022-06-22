@@ -1,8 +1,8 @@
 # Minimum required CMake version
 cmake_minimum_required(VERSION 3.11)
 
-# The name of our project
-project($ENV{PROJ_NAME}
+# Our project
+project("hello"
     DESCRIPTION "0.0.0"
     LANGUAGES CXX)
 
@@ -13,13 +13,10 @@ set(SOURCES
 )
 
 # Our target
-add_executable($ENV{PROJ_NAME}_binary ${SOURCES})
+add_executable(${PROJECT_NAME}_binary ${SOURCES})
 
 # Include dirs
-target_include_directories($ENV{PROJ_NAME}_binary
+target_include_directories(${PROJECT_NAME}_binary
     PRIVATE
     ${PROJECT_SOURCE_DIR}/include
 )
-
-# Clang tidy
-set(CMAKE_CXX_CLANG_TIDY clang-tidy -checks=-*,readability-*)

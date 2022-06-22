@@ -49,3 +49,9 @@ jobs:
       - name: Test Individual Projects
         run: |
           cd assignments/${{ matrix.project }} && ./run.sh --test
+
+      - name: Upload Binaries as artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.project }}
+          path: assignments/${{ matrix.project }}/_build/*_binary

@@ -6,9 +6,20 @@ project($ENV{PROJ_NAME}
     DESCRIPTION "0.0.0"
     LANGUAGES CXX)
 
-# Our target
-add_executable($ENV{PROJ_NAME}_binary main.cpp
-    src/printhello.cpp)
+# our sources
+set(SOURCES
+    src/printhello.cpp
+    main.cpp
+)
 
-target_compile_features($ENV{PROJ_NAME}_binary PRIVATE cxx_std_20)
-target_include_directories($ENV{PROJ_NAME}_binary PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+# Our target
+add_executable($ENV{PROJ_NAME}_binary ${SOURCES})
+
+# Include dirs
+target_include_directories($ENV{PROJ_NAME}_binary
+    PRIVATE
+    ${PROJECT_SOURCE_DIR}/include
+)
+
+# Clang tidy
+set(CMAKE_CXX_CLANG_TIDY clang-tidy -checks=-*,readability-*)

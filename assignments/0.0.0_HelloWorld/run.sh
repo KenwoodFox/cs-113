@@ -7,7 +7,7 @@ export PROJ_NAME="hello"
 # You can invoke cmake as ususal per your system
 # See the readme at the root of this repo.
 
-cmake . -B_build
+cmake . -B_build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 if [[ $* == *--test* ]]
 then

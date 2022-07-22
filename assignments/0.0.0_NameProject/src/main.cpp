@@ -2,6 +2,10 @@
  * 2022
  */
 
+#ifndef MOTD
+#define MOTD "?"
+#endif
+
 #include <iostream>
 #include <string>
 
@@ -13,5 +17,7 @@ int main()
     std::getline(std::cin, name);
 
     std::cout << "Hello " << name << ".\n";
+
+    std::cout << MOTD; // Print build info
     return 0;
 }

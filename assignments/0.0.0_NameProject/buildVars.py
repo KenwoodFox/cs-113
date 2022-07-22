@@ -43,7 +43,7 @@ username = (
 )
 
 # Cleanup CI
-if username == "root":
+if username == "runner":
     username = "github"
     host = "github"
 

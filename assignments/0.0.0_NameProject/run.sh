@@ -20,10 +20,14 @@ then
 	find . -name '*.tex' -exec latexmk --shell-escape -pdf {} \;
 
     # Stage and zip
-    mkdir -p bin
+    mkdir -p bin/
+    mkdir -p source/
     cp *_binary bin/
 
-    tar -zcvf $projName.tar.gz bin/ Writeup.pdf
+    cp -r ../* source/
+    rm -r source/_build # messy but extglobs are hard
+
+    tar -zcvf $projName.tar.gz bin/ Writeup.pdf source/
 elif [[ $* == *--test* ]]
 then
     cd _build && make

@@ -46,12 +46,12 @@ jobs:
           sudo apt update
           sudo apt install build-essential cmake
 
-      - name: Test Individual Projects
+      - name: Pack and Test Individual Projects
         run: |
-          cd assignments/${{ matrix.project }} && ./run.sh --test
+          cd assignments/${{ matrix.project }} && ./run.sh --pack
 
       - name: Upload Binaries as artifacts
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.project }}
-          path: assignments/${{ matrix.project }}/_build/*_binary
+          path: assignments/${{ matrix.project }}/_build/*.tar.gz

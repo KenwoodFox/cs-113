@@ -9,7 +9,7 @@ cmake . -B_build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 projName=$(pwd | awk -F / '{print $NF}') # Get project name
 
-if [[ $* == *--test* ]]
+if [[ $* == *--pack* ]]
 then
     cd _build && make
     python ../test.py | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g' &> results.txt # Pipe the test results to a file (Also strips the color codes with sed)
@@ -24,6 +24,10 @@ then
     cp *_binary bin/
 
     tar -zcvf $projName.tar.gz bin/ Writeup.pdf
+elif [[ $* == *--test* ]]
+then
+    cd _build && make
+    python ../test.py
 else
     cd _build && make && ./*_binary # Expects make
 fi

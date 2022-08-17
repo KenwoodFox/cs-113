@@ -11,7 +11,9 @@ for file in os.listdir("."):
         pro.logfile = sys.stdout.buffer
 
         try:
-            pro.expect("Hello World!*", timeout=1)
+            pro.expect("Hello world!", timeout=1)
+            pro.expect("How are you?", timeout=1)
+            pro.expect("   (I'm fine).*", timeout=1)
         except:
             print("FAIL")
             sys.exit(1)

@@ -35,9 +35,9 @@ jobs:
     strategy:
       matrix:
         project:
-          - 0.0.0_HelloWorld
           - 0.0.0_NameProject
           - 1.12_ASCIIArt
+          - 1.13_HelloWorld
 
     steps:
       - uses: actions/checkout@v3

@@ -3,16 +3,14 @@
  */
 
 #ifndef MOTD
-#define MOTD "?"
+#define MOTD ""
 #endif
 
 #include <iostream>
 
-#include "printhello.h"
-
 int main()
 {
-    printHello();
+    std::cout << "Hello world!\nHow are you?\n   (I'm fine).\n";
 
     std::cout << MOTD; // Print build info
     return 0;

@@ -8,7 +8,6 @@ project("hello"
 
 # our sources
 set(SOURCES
-    src/printhello.cpp
     src/main.cpp
 )
 

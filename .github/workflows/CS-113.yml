@@ -1,0 +1,57 @@
+name: CS-113
+
+on:
+  push:
+    branches:
+      - "main"
+    tags:
+      - "*"
+  pull_request:
+
+jobs:
+  cpp-linter:
+    name: clang-tidy (delinter)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: shenxianpeng/cpp-linter-action@v1
+        id: linter
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          style: file
+
+      - name: Fail if lint required
+        if: steps.linter.outputs.checks-failed > 0
+        run: |
+          echo "Some files failed the linting checks!"
+        # exit 1
+
+  project-builder:
+    # Uses a matrix strat
+    name: Project Builder
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project:
+          - 0.0.0_HelloWorld
+          - 0.0.0_NameProject
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install deps
+        run: |
+          sudo apt update
+          sudo apt install build-essential cmake texlive-latex-recommended texlive-latex-extra texlive-pictures pandoc rename latexmk
+
+      - name: Pack and Test Individual Projects
+        run: |
+          cd assignments/${{ matrix.project }} && ./run.sh --pack
+
+      - name: Upload Binaries as artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.project }}
+          path: assignments/${{ matrix.project }}/_build/*.tar.gz

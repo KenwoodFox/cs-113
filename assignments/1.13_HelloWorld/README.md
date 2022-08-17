@@ -1,3 +1,3 @@
-# Example proj
+# 1.13 Hello World
 
-Good stuff here: https://youtu.be/AJRGU_XgVMQ
+Prints hello world basically!

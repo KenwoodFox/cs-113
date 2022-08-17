@@ -1,3 +1,5 @@
-# Name Project (example)
+# 1.12 ASCII Art
 
-Good stuff here: https://youtu.be/AJRGU_XgVMQ
+Prints out some ascii art!
+
+Use the `ART_SEL` define to choose what art you want.

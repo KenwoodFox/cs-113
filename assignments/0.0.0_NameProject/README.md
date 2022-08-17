@@ -1,3 +1,3 @@
-# Name Project (example)
+# 0.0 Name Project (example)
 
-Good stuff here: https://youtu.be/AJRGU_XgVMQ
+Replace me later!

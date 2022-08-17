@@ -37,6 +37,7 @@ jobs:
         project:
           - 0.0.0_HelloWorld
           - 0.0.0_NameProject
+          - 1.12_ASCIIArt
 
     steps:
       - uses: actions/checkout@v3

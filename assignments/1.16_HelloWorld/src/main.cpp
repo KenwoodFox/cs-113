@@ -9,8 +9,6 @@
 #include <iostream>
 #include <string>
 
-int16_t base;
-
 int main()
 {
     std::cout << "Hello World!\n";

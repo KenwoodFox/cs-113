@@ -40,6 +40,7 @@ jobs:
           - 1.13_HelloWorld
           - 1.14_Basics
           - 1.15_InputOutput
+          - 1.16_HelloWorld
 
     steps:
       - uses: actions/checkout@v3

@@ -3,7 +3,7 @@
  */
 
 #ifndef MOTD
-#define MOTD "?"
+#define MOTD ""
 #endif
 
 #include <iostream>

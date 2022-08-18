@@ -39,6 +39,7 @@ jobs:
           - 1.12_ASCIIArt
           - 1.13_HelloWorld
           - 1.14_Basics
+          - 1.15_InputOutput
 
     steps:
       - uses: actions/checkout@v3

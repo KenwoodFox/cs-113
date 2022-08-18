@@ -38,6 +38,7 @@ jobs:
           - 0.0.0_NameProject
           - 1.12_ASCIIArt
           - 1.13_HelloWorld
+          - 1.14_Basics
 
     steps:
       - uses: actions/checkout@v3

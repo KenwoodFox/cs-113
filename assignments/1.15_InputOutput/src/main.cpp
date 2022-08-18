@@ -6,11 +6,6 @@
 #define MOTD ""
 #endif
 
-// Choose what art we want to display
-#define ART_SEL 1
-// Only valid for ART_SEL != 0
-#define TREE_SIZE 7
-
 #include <iostream>
 #include <string>
 

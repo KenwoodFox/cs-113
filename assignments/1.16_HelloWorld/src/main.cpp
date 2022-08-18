@@ -13,9 +13,7 @@ int16_t base;
 
 int main()
 {
-    std::cin >> base;
-
-    std::cout << base * base << "\n";
+    std::cout << "Hello World!\n";
 
     std::cout << MOTD; // Print build info
     return 0;

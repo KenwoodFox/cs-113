@@ -2,8 +2,8 @@
 cmake_minimum_required(VERSION 3.11)
 
 # Our project
-project("HelloWorld"
-    DESCRIPTION "1.13"
+project("Basics"
+    DESCRIPTION "1.14"
     LANGUAGES CXX)
 
 # our sources

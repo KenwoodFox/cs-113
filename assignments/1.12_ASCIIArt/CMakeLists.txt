@@ -2,8 +2,8 @@
 cmake_minimum_required(VERSION 3.11)
 
 # Our project
-project("name"
-    DESCRIPTION "0.0.0"
+project("ASCIIArt"
+    DESCRIPTION "1.12"
     LANGUAGES CXX)
 
 # our sources

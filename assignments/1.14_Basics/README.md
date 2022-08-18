@@ -1,5 +1,3 @@
-# 1.12 ASCII Art
+# 1.14 Basics
 
-Prints out some ascii art!
-
-Use the `ART_SEL` define to choose what art you want.
+Just the basics

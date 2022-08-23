@@ -43,6 +43,7 @@ jobs:
           - 1.16_HelloWorld
           - 1.17_NoParking
           - 1.18_RealEstate
+          - 1.19_AsciiArrow
 
     steps:
       - uses: actions/checkout@v3

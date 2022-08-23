@@ -46,6 +46,7 @@ jobs:
           - 1.19_AsciiArrow
           - 1.20_HelloWorld
           - 1.21_BasicOutput
+          - 1.22_ASCIIArt
 
     steps:
       - uses: actions/checkout@v3

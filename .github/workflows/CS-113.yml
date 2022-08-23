@@ -41,6 +41,8 @@ jobs:
           - 1.14_Basics
           - 1.15_InputOutput
           - 1.16_HelloWorld
+          - 1.17_NoParking
+          - 1.18_RealEstate
 
     steps:
       - uses: actions/checkout@v3

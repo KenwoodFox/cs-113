@@ -25,7 +25,7 @@ int main()
     bodyChar = '0';
     tipChar = '1';
 
-    printArrow(bodyChar, tipChar);
+    printArrow(bodyChar, tipChar, 10, 5, 5, 15);
 
     std::cout << MOTD; // Print build info
     return 0;

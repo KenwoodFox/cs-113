@@ -9,9 +9,6 @@
 #include <iostream>
 #include <string>
 
-#define startTime 2
-#define parkingDuration 4
-
 int currentPrice, lastMonthsPrice;
 
 float getEstMorgage(int curprice);

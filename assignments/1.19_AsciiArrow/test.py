@@ -11,14 +11,16 @@ for file in os.listdir("."):
         pro.logfile = sys.stdout.buffer
 
         try:
-            pro.sendline("200000")
-            pro.sendline("210000")
+            pro.sendline("0")
+            pro.sendline("1")
 
-            pro.expect(
-                "This house is $200000. The change is $-10000 since last month.",
-                timeout=1,
-            )
-            pro.expect("The estimated monthly mortgage is $850.*", timeout=1)
+            pro.expect("     1", timeout=1)
+            pro.expect("     11", timeout=1)
+            pro.expect("00000111", timeout=1)
+            pro.expect("000001111", timeout=1)
+            pro.expect("00000111", timeout=1)
+            pro.expect("     11", timeout=1)
+            pro.expect("     11*", timeout=1)
         except:
             print("FAIL")
             sys.exit(1)

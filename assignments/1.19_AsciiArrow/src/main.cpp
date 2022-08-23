@@ -9,9 +9,6 @@
 #include <iostream>
 #include <string>
 
-#define startTime 2
-#define parkingDuration 4
-
 char bodyChar, tipChar;
 
 void printArrow(char bodyChar, char tipChar, uint8_t bodyLength = 5, uint8_t tipLength = 4, uint8_t bodyHeight = 3, uint8_t tipHeight = 7);

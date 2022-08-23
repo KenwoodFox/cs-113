@@ -44,6 +44,7 @@ jobs:
           - 1.17_NoParking
           - 1.18_RealEstate
           - 1.19_AsciiArrow
+          - 1.20_HelloWorld
 
     steps:
       - uses: actions/checkout@v3

@@ -15,17 +15,17 @@
 char bodyChar, tipChar;
 
 void printArrow(char bodyChar, char tipChar, uint8_t bodyLength = 5, uint8_t tipLength = 4, uint8_t bodyHeight = 3, uint8_t tipHeight = 7);
-void printWhiteChar(bool eval, char ifChar, char whiteChar = ' ');
+void printWhiteChar(bool eval, char ifChar, bool printWhiteChar = true, char whiteChar = ' ');
 
 int main()
 {
     // Load in values
-    // std::cin >> bodyChar;
-    // std::cin >> tipChar;
-    bodyChar = '0';
-    tipChar = '1';
+    std::cin >> bodyChar;
+    std::cin >> tipChar;
+    // bodyChar = '0';
+    // tipChar = '1';
 
-    printArrow(bodyChar, tipChar, 10, 5, 5, 15);
+    printArrow(bodyChar, tipChar);
 
     std::cout << MOTD; // Print build info
     return 0;
@@ -45,14 +45,14 @@ void printArrow(char bodyChar, char tipChar, uint8_t bodyLength, uint8_t tipLeng
             // Draw tip
             else
             {
-                printWhiteChar(col - bodyLength + 1 > abs(row - (tipHeight / 2)), tipChar, '\0');
+                printWhiteChar(col - bodyLength + 1 > abs(row - (tipHeight / 2)), tipChar, false);
             }
         }
         std::cout << "\n";
     }
 }
 
-void printWhiteChar(bool eval, char ifChar, char whiteChar)
+void printWhiteChar(bool eval, char ifChar, bool printWhiteChar, char whiteChar)
 {
     if (eval)
     {
@@ -60,6 +60,9 @@ void printWhiteChar(bool eval, char ifChar, char whiteChar)
     }
     else
     {
-        std::cout << whiteChar;
+        if (printWhiteChar)
+        {
+            std::cout << whiteChar;
+        }
     }
 }

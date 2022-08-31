@@ -12,15 +12,7 @@ for file in os.listdir("."):
 
         try:
             pro.sendline("0")
-            pro.sendline("1")
-
-            pro.expect("     1", timeout=1)
-            pro.expect("     11", timeout=1)
-            pro.expect("00000111", timeout=1)
-            pro.expect("000001111", timeout=1)
-            pro.expect("00000111", timeout=1)
-            pro.expect("     11", timeout=1)
-            pro.expect("     11*", timeout=1)
+            pro.expect("1*", timeout=1)
         except:
             print("FAIL")
             sys.exit(1)

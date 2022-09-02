@@ -47,6 +47,7 @@ jobs:
           - 1.20_HelloWorld
           - 1.21_BasicOutput
           - 1.22_ASCIIArt
+          - 2.11_ParsingDigits
 
     steps:
       - uses: actions/checkout@v3

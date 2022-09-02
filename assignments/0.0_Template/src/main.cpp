@@ -7,7 +7,7 @@
 #endif
 
 #include <iostream>
-#include <string>
+
 int main()
 {
     // My code here..

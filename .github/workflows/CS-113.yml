@@ -35,7 +35,6 @@ jobs:
     strategy:
       matrix:
         project:
-          - 0.0.0_NameProject
           - 1.12_ASCIIArt
           - 1.13_HelloWorld
           - 1.14_Basics
@@ -48,6 +47,8 @@ jobs:
           - 1.21_BasicOutput
           - 1.22_ASCIIArt
           - 2.11_ParsingDigits
+          - Session1_BlockLetters
+          - Session1_WelcomeMessage
 
     steps:
       - uses: actions/checkout@v3

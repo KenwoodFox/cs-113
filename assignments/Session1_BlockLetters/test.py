@@ -10,15 +10,5 @@ for file in os.listdir("."):
 
         pro.logfile = sys.stdout.buffer
 
-        try:
-            pro.expect("What is your name?:*", timeout=1)
-
-            pro.sendline("TestUserName")
-
-            pro.expect("Hello TestUserName*", timeout=1)
-        except:
-            print("FAIL")
-            sys.exit(1)
-
         print("PASS")
         sys.exit(0)

@@ -3,16 +3,19 @@
  */
 
 #ifndef MOTD
-#define MOTD "?"
+#define MOTD ""
 #endif
 
 #include <iostream>
+#include <string>
 
-#include "printhello.h"
+int16_t base;
 
 int main()
 {
-    printHello();
+    std::cin >> base;
+
+    std::cout << base * base << "\n";
 
     std::cout << MOTD; // Print build info
     return 0;

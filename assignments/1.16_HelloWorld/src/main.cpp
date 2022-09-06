@@ -11,12 +11,7 @@
 
 int main()
 {
-    std::string name;
-
-    std::cout << "What is your name?: ";
-    std::getline(std::cin, name);
-
-    std::cout << "Hello " << name << ".\n";
+    std::cout << "Hello World!\n";
 
     std::cout << MOTD; // Print build info
     return 0;

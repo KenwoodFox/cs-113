@@ -9,14 +9,15 @@
 #include <iostream>
 #include <string>
 
+int16_t base;
+
 int main()
 {
-    std::string name;
+    // Prompt for a number
+    std::cout << "Enter x: \n";
+    std::cin >> base;
 
-    std::cout << "What is your name?: ";
-    std::getline(std::cin, name);
-
-    std::cout << "Hello " << name << ".\n";
+    std::cout << "x doubled is: " << base * 2 << "\n";
 
     std::cout << MOTD; // Print build info
     return 0;

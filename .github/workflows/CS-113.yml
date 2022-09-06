@@ -49,6 +49,7 @@ jobs:
           - 2.11_ParsingDigits
           - Session1_BlockLetters
           - Session1_WelcomeMessage
+          - Session1_ThreeIntegersProblem
 
     steps:
       - uses: actions/checkout@v3

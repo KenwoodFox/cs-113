@@ -10,5 +10,15 @@ for file in os.listdir("."):
 
         pro.logfile = sys.stdout.buffer
 
+        try:
+            pro.sendline("0")
+            pro.expect(
+                "       _    ____    ______            _____   ______   _____    _    _   _______   _______    ____*",
+                timeout=1,
+            )
+        except:
+            print("FAIL")
+            sys.exit(1)
+
         print("PASS")
         sys.exit(0)

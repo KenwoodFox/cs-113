@@ -18,8 +18,8 @@ int main()
 {
     for (uint8_t i = 0; i < STAT_SIZE; i++)
     {
-        printf("Enter an integer (%d/%d): ", i, STAT_SIZE);
-        scanf("%d", avgList + i);
+        printf("Enter an integer (%d/%d): ", i + 1, STAT_SIZE);
+        scanf("%d", avgList + i); // Sorta clunky cuz pointers but, whateveah~
     }
 
     uint16_t avg;

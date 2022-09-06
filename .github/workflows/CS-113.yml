@@ -50,6 +50,7 @@ jobs:
           - Session1_BlockLetters
           - Session1_WelcomeMessage
           - Session1_ThreeIntegersProblem
+          - Session2_SimpleStatistics
 
     steps:
       - uses: actions/checkout@v3

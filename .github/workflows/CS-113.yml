@@ -52,6 +52,7 @@ jobs:
           - Session1_ThreeIntegersProblem
           - Session2_SimpleStatistics
           - Session2_PayIncrease
+          - Session2_CoinCalculator
 
     steps:
       - uses: actions/checkout@v3

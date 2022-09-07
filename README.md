@@ -4,6 +4,17 @@
 
 **!! Problems delayed by a week! !!**
 
+## loading submodules
+
+This repo uses several submodules, use
+
+```shell
+git submodule update --init --recursive
+```
+
+To init them all
+
+
 ## Building a specific project
 
 CD to the project you want and invoke:

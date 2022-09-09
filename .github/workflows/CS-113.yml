@@ -71,3 +71,9 @@ jobs:
         with:
           name: ${{ matrix.project }}
           path: assignments/${{ matrix.project }}/_build/*.tar.gz
+
+      - name: Upload PDF as artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.project }}
+          path: assignments/${{ matrix.project }}/_build/*.pdf

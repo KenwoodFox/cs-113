@@ -28,6 +28,9 @@ then
     rm -r source/_build # messy but extglobs are hard
 
     tar -zcvf $projName.tar.gz bin/ Writeup.pdf source/
+
+    # This part for brightspace
+    mv Writeup.pdf "$projName.pdf"
 elif [[ $* == *--test* ]]
 then
     cd _build && make

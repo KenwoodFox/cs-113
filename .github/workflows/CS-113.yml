@@ -53,6 +53,7 @@ jobs:
           - Session2_SimpleStatistics
           - Session2_PayIncrease
           - Session2_CoinCalculator
+          - Extra1_AnimatedHelloWorld
 
     steps:
       - uses: actions/checkout@v3

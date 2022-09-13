@@ -12,7 +12,7 @@ uint16_t my_num = 0;
 
 int main()
 {
-    std::cout << "Enter a number, we'll add one to it [1]: ";
+    std::cout << "Enter a number, I'll perform some reference operations on it [1]: ";
     std::cin >> my_num;
 
     my_num++;

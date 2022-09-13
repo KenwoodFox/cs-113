@@ -13,7 +13,7 @@ set(SOURCES
 
 # Get the latest commit hash
 execute_process(
-    COMMAND python ../Shared/buildVars.py
+    COMMAND python SpecialVars.py
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     OUTPUT_VARIABLE MOTD
     OUTPUT_STRIP_TRAILING_WHITESPACE)

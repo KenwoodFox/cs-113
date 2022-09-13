@@ -50,9 +50,9 @@ if username == "runner":
 # Colors!
 revision = revision.replace("dirty", "\x1B[31mdirty\x1B[0m")
 host = "\x1B[34m" + host + "\x1B[0m"
-username = "\x1B[34m" + username + ", Isiah and Tim\x1B[0m"
+username = "\x1B[34m Joe, Isiah, Tim and Steven\x1B[0m"
 
 
-motd = f"\\r\\n\\r\\nSoftware version {revision}.\\r\\ncompiled on {today.strftime('%B %d, %Y')} by {username} using {host}.\\r\\n\\r\\n"
+motd = f"\\r\\n\\r\\nSoftware version {revision}.\\r\\ncompiled on {today.strftime('%B %d, %Y')} by {username}.\\r\\n\\r\\n"
 
 print(motd)

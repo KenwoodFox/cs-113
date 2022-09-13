@@ -20,9 +20,15 @@ std::vector<glm::vec3> cur_normals;
 
 int main()
 {
-    std::cout << loadOBJ("../3d/Cube.obj", cur_vertices, cur_uvs, cur_normals);
+    std::cout << loadOBJ("../3d/SmallTestShape.obj", cur_vertices, cur_uvs, cur_normals) << std::endl;
 
-    // std::cout << glm::to_string(cur_vertices) << std::endl;
+    for (uint8_t i = 0; i < 6; i++)
+    {
+        std::cout << cur_vertices[i].x << std::endl;
+        std::cout << cur_vertices[i].y << std::endl;
+        std::cout << cur_vertices[i].z << std::endl;
+        std::cout << std::endl;
+    }
 
     printf(MOTD); // Print build info
     return 0;

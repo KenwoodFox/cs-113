@@ -1,4 +1,4 @@
-/* Team 2
+/* Team 2 best team
  * 2022
  */
 
@@ -6,25 +6,24 @@
 #define MOTD ""
 #endif
 
-#include <stdio.h>
-#include <stdint.h>
+#include <iostream>
 
 uint16_t my_num = 0;
 
 int main()
 {
-    printf("Enter a number, we'll add one to it [1]: ");
-    scanf("%d", &my_num);
+    std::cout << "Enter a number, we'll add one to it [1]: ";
+    std::cin >> my_num;
 
     my_num++;
-    printf("Your number plus one \t\t(++) is %d\n", my_num);
+    std::cout << "Your number plus one \t\t(++) is " << my_num << "\n";
 
     my_num += 2;
-    printf("Your number plus equals 2 \t(+= 2) is %d\n", my_num);
+    std::cout << "Your number plus equals 2 \t(+= 2) is " << my_num << "\n";
 
     my_num--;
-    printf("Your number minus one \t\t(--) is %d\n", my_num);
+    std::cout << "Your number minus one \t\t(--) is " << my_num << "\n";
 
-    printf(MOTD); // Print build info
+    std::cout << MOTD; // Print build info
     return 0;
 }

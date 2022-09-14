@@ -6,6 +6,9 @@ project("AnimatedHelloWorld"
     DESCRIPTION "Extra1"
     LANGUAGES CXX)
 
+# libigl
+add_subdirectory(libigl) # (Included as a submodule)
+
 # our sources
 set(SOURCES
     src/main.cpp
@@ -29,4 +32,8 @@ target_compile_definitions(${PROJECT_NAME}_binary PRIVATE
 target_include_directories(${PROJECT_NAME}_binary
     PRIVATE
     ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/include/HelloWorldLib
 )
+
+# Link libs
+target_link_libraries(${PROJECT_NAME}_binary igl::core)

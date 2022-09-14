@@ -13,6 +13,9 @@
 // # Includes for our own headers
 #include "loader.h"
 
+// // Graphics includes
+#include "object.h"
+
 // Graphics
 std::vector<glm::vec3> cur_vertices; // Every vertice were drawing on the screen now
 std::vector<glm::vec2> cur_uvs;

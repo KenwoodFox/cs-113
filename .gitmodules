@@ -1,0 +1,3 @@
+[submodule "assignments/Extra1_AnimatedHelloWorld/libigl"]
+	path = assignments/Extra1_AnimatedHelloWorld/libigl
+	url = https://github.com/libigl/libigl.git

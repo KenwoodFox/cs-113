@@ -53,6 +53,8 @@ jobs:
           - Session2_SimpleStatistics
           - Session2_PayIncrease
           - Session2_CoinCalculator
+          - Team7_TempConversion
+          - Team7_SimpleStatistics
           - Extra1_AnimatedHelloWorld
 
     steps:

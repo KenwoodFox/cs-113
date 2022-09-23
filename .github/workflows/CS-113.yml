@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: shenxianpeng/cpp-linter-action@v1
+      - uses: cpp-linter/cpp-linter-action@v2
         id: linter
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -53,6 +53,9 @@ jobs:
           - Session2_SimpleStatistics
           - Session2_PayIncrease
           - Session2_CoinCalculator
+          - Team7_TempConversion
+          - Team7_SimpleStatistics
+          - Extra1_AnimatedHelloWorld
 
     steps:
       - uses: actions/checkout@v3

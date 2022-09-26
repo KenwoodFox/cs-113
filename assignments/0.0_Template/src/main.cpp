@@ -6,12 +6,13 @@
 #define MOTD ""
 #endif
 
-#include <iostream>
+#include <stdio.h>
+#include <stdint.h>
 
 int main()
 {
     // My code here..
 
-    std::cout << MOTD; // Print build info
+    printf(MOTD); // Print build info
     return 0;
 }

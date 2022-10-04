@@ -15,20 +15,23 @@ int main()
 
     scanf("%c", &letterGrade);
 
+    // We want the letters to be uppercase for eval, so..
+    letterGrade = letterGrade <= 90 && letterGrade >= 65 ? letterGrade : letterGrade - 32; // Map lowercase to uppercase
+
     switch (letterGrade)
     {
     case 'A':
         printf("Excellent job!");
         break;
-    
+
     case 'B':
         printf("Still Radical");
         break;
-    
+
     case 'C':
         printf("C's get degrees");
         break;
-    
+
     case 'D':
         printf("Dope bro,");
         break;
@@ -38,7 +41,7 @@ int main()
 
     default:
         printf("I didn't understand that input!");
-        break;
+        return 255;
     }
 
     printf(MOTD); // Print build info

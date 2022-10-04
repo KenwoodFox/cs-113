@@ -47,6 +47,9 @@ jobs:
           - 1.21_BasicOutput
           - 1.22_ASCIIArt
           - 2.11_ParsingDigits
+          - 3.17_LeapYear
+          - 3.18_VendingMachine
+          - 3.19_Seasons
           - Session1_BlockLetters
           - Session1_WelcomeMessage
           - Session1_ThreeIntegersProblem

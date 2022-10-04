@@ -25,10 +25,10 @@ int main()
     regular_hours = hours_worked > MAX_HOURS ? 40 : hours_worked;             // Truncate
     overtime_hours = hours_worked > MAX_HOURS ? hours_worked - MAX_HOURS : 0; // Truncate
 
-    printf("You worked %d hours, %d of witch are paid at your regular rate %d/hr, and the other %d are %.1lf times that.\n\n", hours_worked, regular_hours, REG_PAY_PER_HR, overtime_hours, OVERTIME_MOD);
-    int reg_pay = regular_hours * REG_PAY_PER_HR;
-    int overtm_pay = overtime_hours * (OVERTIME_MOD * regular_hours);
-    printf("Normal  \t%d\t%d\nOvertime\t%d\t%d\n\nTotal   \t%d", regular_hours, reg_pay, overtime_hours, overtm_pay, reg_pay + overtm_pay);
+    printf("You worked %d hours, %d of witch are paid at your regular rate $%d/hr, and the other %d are %.1lf times that.\n\n", hours_worked, regular_hours, REG_PAY_PER_HR, overtime_hours, OVERTIME_MOD);
+    double reg_pay = regular_hours * REG_PAY_PER_HR;
+    double overtm_pay = overtime_hours * (OVERTIME_MOD * REG_PAY_PER_HR);
+    printf("Normal  \t%d\t$%0.2lf\nOvertime\t%d\t$%0.2lf\n\nTotal   \t$%.2lf", regular_hours, reg_pay, overtime_hours, overtm_pay, reg_pay + overtm_pay);
 
     printf(MOTD); // Print build info
     return 0;

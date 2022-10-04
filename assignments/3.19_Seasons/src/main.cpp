@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include <string.h>
 
 int getMonth(char *_month);
 
@@ -21,8 +22,7 @@ enum Season
 
 int main()
 {
-    char in_month[15];
-    int in_day;
+    char *in_month;
 
     scanf("%s", in_month);
     // scanf("%d", in_day);
@@ -51,23 +51,11 @@ const char *const months[12] = {
 int getMonth(char *_month)
 {
     // Find a match, yes this could be done with std::string but i feel like that may be cheating
-    for (uint8_t i = 0; i < (sizeof(months) / sizeof(char *)) - 1; i++)
+    for (uint8_t i = 0; i < 11; i++)
     {
         printf("Try match %s with %s at %d\n", _month, months[i], i);
-        bool match = true;
-        for (uint8_t t = 0; t < (sizeof(months[i]) / sizeof(months[0][0]) - 1); t++)
-        {
-            printf("Match %c and %c (Scanning %d chars)\n", months[i][t], _month[t], (sizeof(months[i]) / sizeof(months[0][0]) - 1));
-            if (months[i][t] != _month[t])
-            {
-                match = false;
-            }
-        }
-        if (match)
-        {
+        if (strcmp(_month, months[i]) == 0)
             return i;
-        }
     }
-
     return -1;
 }

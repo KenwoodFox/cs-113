@@ -1,0 +1,84 @@
+\title{ Session3\_LargestAndSmallest }
+\author{Joe}
+\date{\today}
+
+\documentclass[12pt]{article}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+
+\usepackage{listings}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{numbers=left,commentstyle=\color{mygreen},keywordstyle=\color{blue}}
+
+
+\begin{document}
+\maketitle
+\pagebreak
+
+% Source Code
+% ===========
+
+\section{Source Code}
+
+Source code for \textsf{main.h}
+\lstinputlisting[language=c++]{../include/main.h}
+
+Source code for \textsf{main.cpp}
+\lstinputlisting[language=c++]{../src/main.cpp}
+
+\newpage
+
+
+% % Block Diagram
+% % =============
+
+% \section{Block Diagram}
+
+% % Define block styles
+% \tikzstyle{decision} = [diamond, draw, fill=blue!20,
+% text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+% \tikzstyle{block} = [rectangle, draw, fill=blue!20,
+% text width=5em, text centered, rounded corners, minimum height=4em]
+% \tikzstyle{line} = [draw, -latex']
+% \tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+% minimum height=2em]
+
+% \begin{tikzpicture}[node distance = 2cm, auto]
+%     % Place nodes
+%     \node [cloud] (main) {Call Main Method};
+%     \node [block, below of=main] (construct) {Construct a std string (name)};
+%     \node [decision, below of=construct] (input) {Prompt for user input};
+%     \node [block, right of=input, node distance=3.5cm] (record) {Save input as name};
+%     \node [block, below of=input, node distance=3.5cm] (concat) {Concat hello, name and newline};
+%     \node [block, below of=concat, node distance=2.5cm] (motd) {Print motd and ver info};
+%     \node [block, below of=motd] (exit) {exit(0)};
+
+%     % Draw lines
+%     \path [line] (main) -- (construct);
+%     \path [line] (construct) -- (input);
+%     \path [line,dashed] (record) |- (construct);
+%     \path [line] (input) -- (record);
+%     \path [line] (input) -- (concat);
+
+%     \path [line] (concat) -- (motd);
+%     \path [line] (motd) -- (exit);
+% \end{tikzpicture}
+
+% \newpage
+
+
+% Test Results
+% ============
+
+\section{Test Results}
+
+Test and test results
+\lstinputlisting{results.txt}
+
+
+
+\end{document}

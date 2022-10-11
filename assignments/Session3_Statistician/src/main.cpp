@@ -47,8 +47,8 @@ int main()
         avg += statList[i];
     }
 
-    posAvg = posSum / posSum;
-    negAvg = negSum / negSum;
+    posAvg = posCt != 0 ? posSum / posCt : 0;
+    negAvg = negCt != 0 ? negSum / negCt : 0;
     avg = sum / STAT_SIZE;
 
     printf("\nSum of positive numbers \t%d\n", posSum);

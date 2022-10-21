@@ -1,3 +1,6 @@
 [submodule "assignments/Extra1_AnimatedHelloWorld/libigl"]
 	path = assignments/Extra1_AnimatedHelloWorld/libigl
 	url = https://github.com/libigl/libigl.git
+[submodule "assignments/Session4_Approximation/libs/progressbar"]
+	path = assignments/Session4_Approximation/libs/progressbar
+	url = https://github.com/gipert/progressbar.git

@@ -11,8 +11,8 @@ for file in os.listdir("."):
         pro.logfile = sys.stdout.buffer
 
         try:
-            pro.sendline("0")
-            pro.expect("1*", timeout=1)
+            pro.sendline("7500")
+            pro.expect("Result computed in*", timeout=20)
         except:
             print("FAIL")
             sys.exit(1)

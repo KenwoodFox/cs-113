@@ -12,7 +12,7 @@ projName=$(pwd | awk -F / '{print $NF}') # Get project name
 if [[ $* == *--pack* ]]
 then
     cd _build && make
-    python ../test.py | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g' &> results.txt # Pipe the test results to a file (Also strips the color codes with sed)
+    # python ../test.py | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g' &> results.txt # Pipe the test results to a file (Also strips the color codes with sed)
 
     # Build the docs
     cp ../*.tex .

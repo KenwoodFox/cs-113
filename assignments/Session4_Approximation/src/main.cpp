@@ -46,7 +46,7 @@ int main()
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
 
-    printf("\n\nResult computed in %ldµs and found to be: %0.62Lf.\n", duration.count(), result);
+    printf("\n\nResult computed in %ld microseconds and found to be: %0.62Lf.\n", duration.count(), result);
 
     printf(MOTD); // Print build info
     return 0;

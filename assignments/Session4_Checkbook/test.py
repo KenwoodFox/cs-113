@@ -12,7 +12,15 @@ for file in os.listdir("."):
 
         try:
             pro.sendline("0")
-            pro.expect("1*", timeout=1)
+            pro.sendline("50")
+            pro.sendline("0")
+            pro.sendline("2")
+            pro.sendline("250")
+            pro.sendline("1")
+            pro.sendline("0")
+            pro.sendline("1400")
+            pro.sendline("1")
+            pro.expect("Balance remaining: 1000.00*", timeout=1)
         except:
             print("FAIL")
             sys.exit(1)

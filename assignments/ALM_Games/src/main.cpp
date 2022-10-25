@@ -104,6 +104,16 @@ int main()
         }
         break;
 
+    case NumberGuess:
+        int _secret = rand() % n_games + 1;
+        int _guess = 0;
+        printf("The computer has chosen a random number between 1 and %d, place an inital guess now: ", n_games);
+        while (_guess != _secret && _guess != -1)
+        {
+            printf("Your guess was %s than your previous guess, type -1 at any time to give up.\n", _guess > _secret ? "larger" : "smaller");
+        }
+        break;
+
     default:
         std::cerr << "Bad input!\n";
         break;

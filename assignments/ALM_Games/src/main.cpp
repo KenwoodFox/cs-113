@@ -56,6 +56,13 @@ int main()
     // Dice
     int dice[6];
 
+    // Guessing game
+    int _secret = 0;
+    int _guess = 0;
+
+    // Reverse guessing
+    int n_iters = 0;
+
     switch (_sel)
     {
     case HandGame:
@@ -105,13 +112,43 @@ int main()
         break;
 
     case NumberGuess:
-        int _secret = rand() % n_games + 1;
-        int _guess = 0;
+        _secret = rand() % n_games + 1;
+
         printf("The computer has chosen a random number between 1 and %d, place an inital guess now: ", n_games);
+        scanf("%d", &_guess);
         while (_guess != _secret && _guess != -1)
         {
-            printf("Your guess was %s than your previous guess, type -1 at any time to give up.\n", _guess > _secret ? "larger" : "smaller");
+            printf("Your guess was %s than the secret number, type -1 at any time to give up.\n", _guess > _secret ? "larger" : "smaller");
+            printf("Guess again: ");
+            scanf("%d", &_guess);
         }
+        printf("You %s, the secret number was %d.\n", _guess == _secret ? "won" : "lost", _secret);
+        break;
+
+    case ReverseNumberGuess:
+        printf("The computer will try and guess your number in the fewest moves possible.\n");
+        printf("Please enter a number between 1 and %d: ", n_games);
+        do
+        {
+            scanf("%d", &_secret);
+        } while (_secret >= n_games || _secret <= 1);
+
+        _guess = n_games / 2; // inital guess
+        while (_guess != _secret)
+        {
+            printf("The computer guesses %d\n", _guess);
+            n_iters++;
+            if (_guess > _secret)
+            {
+                _guess = _guess / 2;
+            }
+            else
+            {
+                _guess = _guess + (_guess / 2);
+            }
+        }
+
+        printf("The computer found your secret number to be %d, finding it in %d moves!\n", _guess, n_iters);
         break;
 
     default:

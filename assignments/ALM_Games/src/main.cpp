@@ -59,6 +59,8 @@ int main()
     // Guessing game
     int _secret = 0;
     int _guess = 0;
+    int _prevHigh = 0;
+    int _prevLow = 0;
 
     // Reverse guessing
     int n_iters = 0;
@@ -127,28 +129,43 @@ int main()
 
     case ReverseNumberGuess:
         printf("The computer will try and guess your number in the fewest moves possible.\n");
-        printf("Please enter a number between 1 and %d: ", n_games);
         do
         {
+            printf("Please enter a number between 1 and %d: ", n_games);
             scanf("%d", &_secret);
         } while (_secret >= n_games || _secret <= 1);
 
         _guess = n_games / 2; // inital guess
-        while (_guess != _secret)
+        _prevHigh = n_games;
+        while (_guess != _secret && n_iters < 25)
         {
             printf("The computer guesses %d\n", _guess);
             n_iters++;
             if (_guess > _secret)
             {
-                _guess = _guess / 2;
+                // Guess was too big
+                _prevHigh = _guess;
+
+                _guess = _prevHigh / 2;
             }
             else
             {
-                _guess = _guess + (_guess / 2);
+                // Guess was too small
+                _prevLow = _guess;
+
+                _guess = ((_prevHigh - _prevLow) / 2) + _guess;
             }
         }
 
-        printf("The computer found your secret number to be %d, finding it in %d moves!\n", _guess, n_iters);
+        if (_guess == _secret)
+        {
+            printf("The computer found your secret number to be %d, finding it in %d moves!\n", _guess, n_iters);
+        }
+        else
+        {
+            printf("You fooled the computer, it could not find your secret number after %d moves!\n", n_iters);
+        }
+
         break;
 
     default:

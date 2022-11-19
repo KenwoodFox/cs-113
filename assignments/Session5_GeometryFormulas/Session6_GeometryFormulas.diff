@@ -1,0 +1,54 @@
+diff --git a/assignments/Session5_GeometryFormulas/Writeup.tex b/assignments/Session5_GeometryFormulas/Writeup.tex
+index 7a9882e..d4ffe53 100644
+--- a/assignments/Session5_GeometryFormulas/Writeup.tex
++++ b/assignments/Session5_GeometryFormulas/Writeup.tex
+@@ -27,6 +27,9 @@
+ Source code for \textsf{main.h}
+ \lstinputlisting[language=c++]{../include/main.h}
+ 
++Source code for \textsf{geometry.h}
++\lstinputlisting[language=c++]{../include/geometry.h}
++
+ Source code for \textsf{main.cpp}
+ \lstinputlisting[language=c++]{../src/main.cpp}
+ 
+diff --git a/assignments/Session5_GeometryFormulas/src/main.cpp b/assignments/Session5_GeometryFormulas/src/main.cpp
+index acce1f5..5760179 100644
+--- a/assignments/Session5_GeometryFormulas/src/main.cpp
++++ b/assignments/Session5_GeometryFormulas/src/main.cpp
+@@ -10,6 +10,8 @@
+ #include <stdint.h>
+ #include <math.h>
+ 
++#include <geometry.h>
++
+ enum Shapes
+ {
+     Sphere,
+@@ -33,7 +35,7 @@ int main()
+             printf("Enter a value for your sphere's radius.\n");
+             scanf("%lf", &_r);
+ 
+-            printf("A sphere with radius %.4lf has volume %.4lf.\n", _r, (4.0 / 3.0) * M_PI * pow(_r, 3));
++            printf("A sphere with radius %.4lf has volume %.4lf.\n", _r, sphere_volume(_r));
+             break;
+ 
+         case static_cast<int>(Cylinder):
+@@ -42,7 +44,7 @@ int main()
+             printf("Enter a value for your Cylinder's height.\n");
+             scanf("%lf", &_h);
+ 
+-            printf("A cylinder with radius %.4lf and height %.4lf has volume %.4lf.\n", _r, _h, M_PI * pow(_r, 2) * _h);
++            printf("A cylinder with radius %.4lf and height %.4lf has volume %.4lf.\n", _r, _h, cylinder_volume(_r, _h));
+             break;
+ 
+         case static_cast<int>(Cone):
+@@ -51,7 +53,7 @@ int main()
+             printf("Enter a value for your cone's height.\n");
+             scanf("%lf", &_h);
+ 
+-            printf("A cone with radius %.4lf and height %.4lf has volume %.4lf.\n", _r, _h, M_PI * pow(_r, 2) * (_h / 3.0));
++            printf("A cone with radius %.4lf and height %.4lf has volume %.4lf.\n", _r, _h, cone_volume(_r, _h));
+             break;
+ 
+         default:

@@ -11,10 +11,8 @@ for file in os.listdir("."):
         pro.logfile = sys.stdout.buffer
 
         try:
-            pro.sendline("Y")
-            pro.sendline("1 1")
-            pro.sendline("0 2")
-            pro.sendline("1 2")
+            pro.sendline("100000000000")
+            pro.sendline("4")
             pro.expect("compiled on*", timeout=1)
         except:
             print("FAIL")
